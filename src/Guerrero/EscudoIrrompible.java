@@ -12,6 +12,7 @@ public class EscudoIrrompible extends Escudo
     @Override
     public void GritoDefensivo()
     {
-        this.defensa += 8;
+        this.defensa += 7;
+        
     }        
 }
