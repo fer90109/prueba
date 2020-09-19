@@ -5,14 +5,14 @@ public class EscudoIrrompible extends Escudo
 {  
     public EscudoIrrompible()
     {
-        defensa += 20; 
+        defensa += 12; 
         nombre = "Escudo Irrompible"; 
     }
 
     @Override
     public void GritoDefensivo()
     {
-        this.defensa += 7;
+      //  this.defensa += 3;
         
     }        
 }

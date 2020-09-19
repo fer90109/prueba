@@ -60,19 +60,21 @@ public class Warrior extends FormaDeVida
         System.out.println(" equipado: " +escudo.nombre);
     }
     
-    
 // golpes
-     
-   
+ 
     public void atacar(FormaDeVida formaDeVida,Weapon arma)
     {
-        formaDeVida.vida -= (this.arma.power );
-        System.out.println("la vida de " + formaDeVida.nombre +" es : " +formaDeVida.vida);
-        System.out.println(" -- "+this.nombre + " esta atacando a "+ formaDeVida.nombre );
-        arma.accionIndividual();
+
+        int reducirVida = (this.arma.power - formaDeVida.escudo.defensa);
+        
+        if(reducirVida >= 0)
+        {
+            formaDeVida.vida -= reducirVida;
+            System.out.println(" Numero de warrior: " +this.numerodeWarrior+ " esta atacando " );
+            System.out.println("la vida del enemigo se redujo: " +reducirVida );
+        }
+        arma.accionIndividual();   
     }
-   
-// varios
     
     public void morir()
     {

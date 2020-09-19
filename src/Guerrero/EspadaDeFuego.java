@@ -5,7 +5,7 @@ public class EspadaDeFuego extends Weapon
     public EspadaDeFuego()
     {
         numeroDeArma = 1;
-        power += 25 ;
+        power += 18 ;
         nombre = "Espada De Fuego"; 
 
     }    

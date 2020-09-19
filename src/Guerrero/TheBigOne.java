@@ -3,41 +3,48 @@ package Guerrero;
 
 public class TheBigOne
 {
+    boolean hayBigOne = false;
     Warrior theBigOne;
-    boolean primerGuerrero ;
-    
     public TheBigOne()
-    {
-        
+    {  
     }
     
    public Warrior combate(Warrior contendiente)
-   {   
-       if (primerGuerrero)
-        {
-            System.out.println(" probando" + theBigOne.numerodeWarrior);
-            theBigOne = contendiente;
-             primerGuerrero = false;  
-        }
-       else       
-        {       
-            theBigOne.atacar(contendiente, contendiente.arma);
-                        
-            if(contendiente.vida <= 0)
-            {   
-                System.out.println(" El contendiente no dio con el tupe");
-            }      
-            else             
+   {           
+       {
+            if (hayBigOne == false)
             {
-                contendiente.atacar(theBigOne, contendiente.arma);
-                if (theBigOne.vida <= 0)
+                theBigOne = contendiente;
+                hayBigOne = true;  
+            }
+            else       
+            {   
+                theBigOne.vida = 100;
+                
+                while(theBigOne.vida >= 1 && contendiente.vida >= 1)
                 {
-                    theBigOne = contendiente;
-                    System.out.println(" El nuevo THE BIG ONE ES: Guerrero" +theBigOne.numerodeWarrior );   
+                    theBigOne.atacar(contendiente, theBigOne.arma);
+                    System.out.println("vida del contendiente: " +contendiente.vida);
+                    
+                    if(contendiente.vida <= 0)
+                    {   
+                        System.out.println(" El contendiente no dio con el pine");
+                    }      
+                    else             
+                    {
+                        System.out.println("contendiente ataca");
+                        contendiente.atacar(theBigOne, contendiente.arma);
+
+                        if (theBigOne.vida <= 0)
+                        {
+                            theBigOne = contendiente;
+                            System.out.println(" El nuevo THE BIG ONE ES: Guerrero" +theBigOne.numerodeWarrior );   
+                        }                    
+                    }    
                 }
             }
-        theBigOne.vida = 100;
         }
-    return theBigOne;
+        System.out.println("set la vida a 100 the big one");
+       return theBigOne;
     }    
 }

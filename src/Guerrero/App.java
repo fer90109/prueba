@@ -17,6 +17,6 @@ public class App
             contadorDeGuerreros ++; 
             theBigOne.combate(warrior);
         }       
-        System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne);
+        System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne.theBigOne.numerodeWarrior);
     }            
 }

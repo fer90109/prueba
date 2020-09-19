@@ -12,7 +12,7 @@ public class EscudoDeHierro extends Escudo
     @Override
     public void GritoDefensivo()
     {
-        this.defensa += 5;
+     //   this.defensa += 1;
     }   
 }
 
