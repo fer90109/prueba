@@ -4,19 +4,19 @@ public class App
 {
     public static void main(String[] args)
     {  
-       //Creando a los 4 combatientes   
-        Arena arena = new Arena();   
-        for (int i = 1; i < 5; i++)
+        TheBigOne theBigOne = new TheBigOne(); 
+       
+        int contadorDeGuerreros = 0;
+    
+       //Creando a los combatientes     
+        for (int i = 0; i < 1000; i++)
         {
-            Warrior warrior = new Warrior(); 
-            String nombres[] = {"Juan" , "Pepe" , "Jose" , "Fer" , ""};
-            warrior.nombre = nombres[i-1];
-           System.out.println("este  es : "+ warrior.nombre);
-            arena.warriorSlot = warrior;
-
-            arena.cargarArena(warrior);
-            System.out.println("");
-        }     
-        arena.CombatesArena(arena.warriorSlot1, arena.warriorSlot2, arena.warriorSlot3, arena.warriorSlot4);
+            System.out.println(contadorDeGuerreros);
+            Warrior warrior = new Warrior();
+            warrior.numerodeWarrior = contadorDeGuerreros;
+            contadorDeGuerreros ++; 
+            theBigOne.Combate(warrior);
+        }       
+        System.out.println("El guerrero Mas poderoso es: " +theBigOne);
     }            
 }
