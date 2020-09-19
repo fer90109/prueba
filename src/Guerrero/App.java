@@ -5,7 +5,7 @@ public class App
     public static void main(String[] args)
     {  
         TheBigOne theBigOne = new TheBigOne(); 
-       
+        Warrior contendiente;
         int contadorDeGuerreros = 0;
     
        //Creando a los combatientes     
@@ -15,8 +15,8 @@ public class App
             Warrior warrior = new Warrior();
             warrior.numerodeWarrior = contadorDeGuerreros;
             contadorDeGuerreros ++; 
-            theBigOne.Combate(warrior);
+            theBigOne.combate(warrior);
         }       
-        System.out.println("El guerrero Mas poderoso es: " +theBigOne);
+        System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne);
     }            
 }

@@ -4,25 +4,25 @@ package Guerrero;
 public class TheBigOne
 {
     Warrior theBigOne;
-    Warrior contendiente;
-    boolean primerGuerrero;
+    boolean primerGuerrero ;
     
     public TheBigOne()
     {
         
     }
     
-   public Warrior Combate(Warrior contendiente)
+   public Warrior combate(Warrior contendiente)
    {   
        if (primerGuerrero)
         {
-           theBigOne = contendiente;
-           primerGuerrero = false;          
+            System.out.println(" probando" + theBigOne.numerodeWarrior);
+            theBigOne = contendiente;
+             primerGuerrero = false;  
         }
        else       
-        {            
-            theBigOne.atacar(contendiente, theBigOne.arma);                                 
-
+        {       
+            theBigOne.atacar(contendiente, contendiente.arma);
+                        
             if(contendiente.vida <= 0)
             {   
                 System.out.println(" El contendiente no dio con el tupe");
