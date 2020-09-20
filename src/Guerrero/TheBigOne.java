@@ -1,18 +1,23 @@
 package Guerrero;
-
+import java.util.*;
 
 public class TheBigOne
 {
     boolean hayBigOne = false;
     Warrior theBigOne;
+
+   
     public TheBigOne()
-    {  
+    { 
+
     }
     
+    
+    
    public Warrior combate(Warrior contendiente)
-   {           
-       {
-            if (hayBigOne == false)
+   {    
+   
+       if (hayBigOne == false)
             {
                 theBigOne = contendiente;
                 hayBigOne = true;  
@@ -43,7 +48,6 @@ public class TheBigOne
                     }    
                 }
             }
-        }
         System.out.println("set la vida a 100 the big one");
        return theBigOne;
     }    

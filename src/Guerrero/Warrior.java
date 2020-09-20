@@ -40,7 +40,7 @@ public class Warrior extends FormaDeVida
                 arma = espadaDeBoom;
             break;
         }        
-        System.out.println(" equipada: " +arma.nombre ); 
+     //   System.out.println(" equipada: " +arma.nombre ); 
     }    
     
     public void equiparEscudo(int numeroDeEscudo)
@@ -57,7 +57,7 @@ public class Warrior extends FormaDeVida
                 this.escudo = escudoIrrompible;
             break;
         }
-        System.out.println(" equipado: " +escudo.nombre);
+    //    System.out.println(" equipado: " +escudo.nombre);
     }
     
 // golpes
