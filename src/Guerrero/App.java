@@ -6,11 +6,11 @@ public class App
     public static void main(String[] args)
     {  
         TheBigOne theBigOne = new TheBigOne(); 
-        Warrior contendiente;
         Warrior[] listaDeGuerreros;
-        listaDeGuerreros = new Warrior[1000];
-        int contadorDeGuerreros = 0;
         int cantidadTotalDeGuerreros = 1000;
+        listaDeGuerreros = new Warrior[cantidadTotalDeGuerreros];
+        int contadorDeGuerreros = 0;
+
          
        //Creando a los combatientes     
         for (int i = 0; i < cantidadTotalDeGuerreros; i++)
