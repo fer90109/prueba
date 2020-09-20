@@ -24,7 +24,7 @@ public class TheBigOne
             }
             else       
             {   
-                theBigOne.vida = 100;
+                contendiente.maxHealth(theBigOne);
                 
                 while(theBigOne.vida >= 1 && contendiente.vida >= 1)
                 {

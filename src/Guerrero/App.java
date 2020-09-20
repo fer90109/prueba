@@ -7,7 +7,7 @@ public class App
     {  
         TheBigOne theBigOne = new TheBigOne(); 
         Warrior[] listaDeGuerreros;
-        int cantidadTotalDeGuerreros = 1000;
+        int cantidadTotalDeGuerreros = 10;
         listaDeGuerreros = new Warrior[cantidadTotalDeGuerreros];
         int contadorDeGuerreros = 0;
 
@@ -18,8 +18,8 @@ public class App
             System.out.println(contadorDeGuerreros+ " contador de guerrero");
             Warrior warrior = new Warrior();
             warrior.numerodeWarrior = contadorDeGuerreros;
-            listaDeGuerreros[i] = warrior;
-            contadorDeGuerreros ++;   
+            contadorDeGuerreros ++;  
+            listaDeGuerreros[i] = warrior; 
             System.out.println(listaDeGuerreros[i].arma.nombre);
         }  
         

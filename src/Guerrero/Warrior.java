@@ -12,9 +12,9 @@ public class Warrior extends FormaDeVida
         numeroDeEscudo = (int)(Math.random()*2);       
         equiparEspada(numeroDeArma);      
         equiparEscudo(numeroDeEscudo);    
-}
+    }
  
-//Equipar  
+    //Equipar  
     
     public void equiparEspada(int numeroDeArma)
     {   
@@ -60,7 +60,7 @@ public class Warrior extends FormaDeVida
     //    System.out.println(" equipado: " +escudo.nombre);
     }
     
-// golpes
+    // golpes
  
     public void atacar(FormaDeVida formaDeVida,Weapon arma)
     {
@@ -74,6 +74,12 @@ public class Warrior extends FormaDeVida
             System.out.println("la vida del enemigo se redujo: " +reducirVida );
         }
         arma.accionIndividual();   
+    }
+    
+    public void maxHealth(Warrior warrior)
+    {
+        System.out.println("Se Recupera la vida a 100");
+        warrior.vida = 100;
     }
     
     public void morir()
