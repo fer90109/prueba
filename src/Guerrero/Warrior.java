@@ -64,7 +64,6 @@ public class Warrior extends FormaDeVida
  
     public void atacar(FormaDeVida formaDeVida,Weapon arma)
     {
-
         int reducirVida = (this.arma.power - formaDeVida.escudo.defensa);
         
         if(reducirVida >= 0)

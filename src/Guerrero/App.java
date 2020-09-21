@@ -1,5 +1,4 @@
 package Guerrero;
-import java.util.*;
 
 public class App 
 {
@@ -7,10 +6,9 @@ public class App
     {  
         TheBigOne theBigOne = new TheBigOne(); 
         Warrior[] listaDeGuerreros;
-        int cantidadTotalDeGuerreros = 10;
+        int cantidadTotalDeGuerreros = 1000;
         listaDeGuerreros = new Warrior[cantidadTotalDeGuerreros];
         int contadorDeGuerreros = 0;
-
          
        //Creando a los combatientes     
         for (int i = 0; i < cantidadTotalDeGuerreros; i++)
@@ -27,6 +25,7 @@ public class App
         {
             theBigOne.combate(listaDeGuerreros[i]);
         }
+        
         System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne.theBigOne.numerodeWarrior);
     }            
 }
