@@ -6,7 +6,7 @@ public class EspadaFantasma extends Weapon{
     public EspadaFantasma()
     {
         numeroDeArma = 2;
-        power += (int)(Math.random()*40);   ;
+        power += (int)(Math.random()*30);   ;
         nombre = "Espada Fantasma";  
     }
     

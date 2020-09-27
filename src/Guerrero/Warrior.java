@@ -5,7 +5,7 @@ public class Warrior extends FormaDeVida
     int numeroDeArma;
     int numeroDeEscudo;
     int numerodeWarrior;
-    
+    int maxDamage;
     public Warrior()
     {      
         numeroDeArma = (int)(Math.random()*4);  
@@ -69,20 +69,14 @@ public class Warrior extends FormaDeVida
         if(reducirVida >= 0)
         {
             formaDeVida.vida -= reducirVida;
-            System.out.println(" Numero de warrior: " +this.numerodeWarrior+ " esta atacando " );
-            System.out.println("la vida del enemigo se redujo: " +reducirVida );
         }
-        arma.accionIndividual();   
-    }
-    
-    public void maxHealth(Warrior warrior)
-    {
-        System.out.println("Se Recupera la vida a 100");
-        warrior.vida = 100;
+ //       arma.accionIndividual();   
     }
     
     public void morir()
     {
         System.out.println(" Hooo El guerrero Muere");
     }
+    
+    
 }

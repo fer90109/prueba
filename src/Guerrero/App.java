@@ -13,19 +13,19 @@ public class App
        //Creando a los combatientes     
         for (int i = 0; i < cantidadTotalDeGuerreros; i++)
         {
-            System.out.println(contadorDeGuerreros+ " contador de guerrero");
             Warrior warrior = new Warrior();
+            System.out.println(" Creado el guerrero Nº: " +contadorDeGuerreros);
             warrior.numerodeWarrior = contadorDeGuerreros;
-            contadorDeGuerreros ++;  
+            contadorDeGuerreros ++;   
             listaDeGuerreros[i] = warrior; 
-            System.out.println(listaDeGuerreros[i].arma.nombre);
         }  
         
         for (int i = 0; i < cantidadTotalDeGuerreros; i++) 
         {
-            theBigOne.combate(listaDeGuerreros[i]);
-        }
-        
-        System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne.theBigOne.numerodeWarrior);
+            theBigOne.combat(listaDeGuerreros[i]);
+        }        
+        System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne.theBigOne.numerodeWarrior );
+        System.out.println("Arma: - " +theBigOne.theBigOne.arma.nombre +" -   Defenza: - " +theBigOne.theBigOne.escudo.nombre);
+        System.out.println(" -  con un daño max de: " +theBigOne.theBigOne.maxDamage);
     }            
 }
