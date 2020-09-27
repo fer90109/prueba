@@ -76,7 +76,5 @@ public class Warrior extends FormaDeVida
     public void morir()
     {
         System.out.println(" Hooo El guerrero Muere");
-    }
-    
-    
+    }  
 }

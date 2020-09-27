@@ -4,7 +4,7 @@ public class TheBigOne
 {
     boolean hayBigOne = false;
     Warrior theBigOne;
-    int maxDamage;
+    
     public TheBigOne()
     { 
     }
@@ -12,6 +12,8 @@ public class TheBigOne
    public Warrior combat(Warrior contendiente)
    {    
         System.out.println(" --------  New Combat --------- GO!! ");
+        System.out.println("");
+        
         int amountDamageA = 0;
         int amountDamageB = 0;
    
@@ -20,8 +22,9 @@ public class TheBigOne
             theBigOne = contendiente;
             hayBigOne = true;  
             System.out.println("----------------- Hay un nuevo Big y es el Nº: " + theBigOne.numerodeWarrior + "-------------------------");    
-            System.out.println("usando el: "+ theBigOne.arma.nombre);
+            System.out.println("usando la: "+ theBigOne.arma.nombre);
             System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre);
+
         }
         else       
         {   
@@ -41,49 +44,44 @@ public class TheBigOne
                 {       
                     System.out.println("No dio con el Pine...");
                    
-                    //big metio max daño    
+                    //big metio max daño?                      
                     if(amountDamageA > theBigOne.maxDamage)
                     {
-                        maxDamage = amountDamageA;   
-                        theBigOne.maxDamage = maxDamage;
-                        System.out.println("New Max Damage1: " + theBigOne.maxDamage);   
-                    }                  
+                        theBigOne.maxDamage = amountDamageA;
+                        System.out.println("New Max Damage del Big One: " + theBigOne.maxDamage);   
+                    } 
                 }
                 else
                 {   
                     //gano contendiente
-                    if (amountDamageB > maxDamage )
+                    if (amountDamageB > theBigOne.maxDamage )
                     {
-                        System.out.println("New Max Damage2: " + maxDamage); 
-                        theBigOne.maxDamage = maxDamage;
-                    } 
-                                         
-                    theBigOne = contendiente;
-                    System.out.println(" ------------------------  Hay un nuevo Big y es : " + theBigOne.numerodeWarrior + "-------------------------");
-                    System.out.println("usando el: "+ theBigOne.arma.nombre);
-                    System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre); 
+                        theBigOne = contendiente;      
+                        theBigOne.maxDamage = amountDamageB;                    
+                        newBig();   
+                    }
                 }         
             } 
             else
             {
                 //solo murio el big
-                if(theBigOne.vida <= 0)
-                {
-                    
-                    if (amountDamageB > theBigOne.maxDamage)
-                    {
-                        theBigOne.maxDamage = maxDamage;
-                        System.out.println("New Max Damage: " + theBigOne.maxDamage); 
-                    } 
-                    //gano contendiente
-                    System.out.println(" ------------------------  Hay un nuevo Big y es : " + theBigOne.numerodeWarrior + "-------------------------");
-                    System.out.println("usando el: "+ theBigOne.arma.nombre);
-                    System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre);  
-                }
+                theBigOne = contendiente;
+                theBigOne.maxDamage = amountDamageB;              
+                newBig();                
             }     
         }  
         theBigOne.vida = 100;
+        System.out.println(" -        Fin del Combate       -  ");
+        System.out.println("");
         return theBigOne;
-    }    
+   }    
+   
+   public void newBig ()
+   {
+        System.out.println("***Hay un nuevo Big y es : " + theBigOne.numerodeWarrior + " ***");
+        System.out.println("***usando la: "+ theBigOne.arma.nombre);
+        System.out.println("***Usando el escudo: "+ theBigOne.escudo.nombre);   
+        System.out.println("***New max Damage is: " + theBigOne.maxDamage);       
+   }
 }
 

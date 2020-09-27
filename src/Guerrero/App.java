@@ -25,7 +25,7 @@ public class App
             theBigOne.combat(listaDeGuerreros[i]);
         }        
         System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne.theBigOne.numerodeWarrior );
-        System.out.println("Arma: - " +theBigOne.theBigOne.arma.nombre +" -   Defenza: - " +theBigOne.theBigOne.escudo.nombre);
+        System.out.println("Arma: - " +theBigOne.theBigOne.arma.nombre +" -   Defenza: - " +theBigOne.theBigOne.escudo.nombre);            
         System.out.println(" -  con un daño max de: " +theBigOne.theBigOne.maxDamage);
     }            
 }
