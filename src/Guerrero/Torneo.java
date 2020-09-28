@@ -7,34 +7,22 @@ public class Torneo
     int amountDamageA;
     int amountDamageB;   
     boolean alive;
-
-   public Warrior combat(Warrior contendiente)
-   {    
+    
+    public Warrior combat(Warrior contendiente)
+    {    
         System.out.println(" --------  New Combat --------- GO!! ");
         System.out.println("");
         
-       if (firstWarrior)
-        {
-            theBigOne = contendiente;
-            firstWarrior = false;  
-            System.out.println("----------------- Hay un Primer Big y es el Nº: " + theBigOne.numerodeWarrior + "----");    
-            System.out.println("usando la: "+ theBigOne.arma.nombre);
-            System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre);
-        }
-        else       
-        {   
-            crossfire(contendiente);
-            whoDied(contendiente);
-        }  
+        firstWarrior(contendiente);
+        crossfire(contendiente);
        
-        theBigOne.vida = 100;
         System.out.println(" -        Fin del Combate       -  ");
-        System.out.println("");
+        System.out.println("");       
         return theBigOne;
     }    
    
-   public void newBig ()
-   {
+    public void newBig ()
+    {
         System.out.println("***Hay un nuevo Big y es : " + theBigOne.numerodeWarrior + " ***");
         System.out.println("***usando la: "+ theBigOne.arma.nombre);
         System.out.println("***Usando el escudo: "+ theBigOne.escudo.nombre);   
@@ -50,9 +38,10 @@ public class Torneo
             contendiente.atacar(theBigOne, contendiente.arma);
             amountDamageB += (contendiente.arma.power - theBigOne.escudo.defensa);     
         }
+            bigOneSelector(contendiente);
     }
     
-    public void whoDied(Warrior contendiente)
+    public void bigOneSelector(Warrior contendiente)
     { 
         
         if(!isAlive(contendiente))
@@ -62,13 +51,13 @@ public class Torneo
                 if(amountDamageA > theBigOne.maxDamage)
                 {
                     theBigOne.maxDamage = amountDamageA;
-                    System.out.println("New Max Damage del Big One: " + theBigOne.maxDamage);   
+                    System.out.println("New Max Damage del Big One: " + theBigOne.maxDamage);      
                 }  
             }
             else
             {  
                 if(theBigOne.maxDamage < amountDamageB)
-                theBigOne = contendiente;      
+                theBigOne = contendiente;  
                 theBigOne.maxDamage = amountDamageB;                    
                 newBig();   
             }         
@@ -79,6 +68,7 @@ public class Torneo
             theBigOne.maxDamage = amountDamageB;              
             newBig();                
         }  
+        theBigOne.vida = 100;
         amountDamageA = 0;
         amountDamageB = 0;     
     }
@@ -98,4 +88,16 @@ public class Torneo
         System.out.println("Arma: - " +theBigOne.arma.nombre +" -   Defenza: - " +theBigOne.escudo.nombre);            
         System.out.println(" -  con un daño max de: " +theBigOne.maxDamage);
     }  
+    
+    public void firstWarrior(Warrior contendiente)
+    {
+        if (firstWarrior)
+        {   
+            theBigOne = contendiente;
+            firstWarrior = false;  
+            System.out.println("----------------- Hay un Primer Big y es el Nº: " + theBigOne.numerodeWarrior + "----");    
+            System.out.println("usando la: "+ theBigOne.arma.nombre);
+            System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre);
+        }
+    }
 }

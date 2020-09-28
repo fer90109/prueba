@@ -22,7 +22,8 @@ public class App
         
         for (int i = 0; i < cantidadTotalDeGuerreros; i++) 
         {
-           torneo.combat(listaDeGuerreros[i]);
+            System.out.println(i);
+            torneo.combat(listaDeGuerreros[i]);
         }        
     torneo.fianlWiner();
     }            
