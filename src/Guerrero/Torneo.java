@@ -14,7 +14,7 @@ public class Torneo
         System.out.println("");
         
         firstWarrior(contendiente);
-        crossfire(contendiente);
+        warriorFigth(contendiente);
        
         System.out.println(" -        Fin del Combate       -  ");
         System.out.println("");       
@@ -29,7 +29,7 @@ public class Torneo
         System.out.println("***New max Damage is: " + theBigOne.maxDamage);       
     }
    
-    public void crossfire(Warrior contendiente) 
+    public void warriorFigth(Warrior contendiente) 
     {
         while(theBigOne.vida >= 1 && contendiente.vida >= 1)
         {
@@ -99,5 +99,5 @@ public class Torneo
             System.out.println("usando la: "+ theBigOne.arma.nombre);
             System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre);
         }
-    }
+    } 
 }
