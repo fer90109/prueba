@@ -21,10 +21,9 @@ public class TheBigOne
         {
             theBigOne = contendiente;
             hayBigOne = true;  
-            System.out.println("----------------- Hay un nuevo Big y es el Nº: " + theBigOne.numerodeWarrior + "-------------------------");    
+            System.out.println("----------------- Hay un Primer Big y es el Nº: " + theBigOne.numerodeWarrior + "----");    
             System.out.println("usando la: "+ theBigOne.arma.nombre);
             System.out.println("Usando el escudo: "+ theBigOne.escudo.nombre);
-
         }
         else       
         {   
@@ -42,8 +41,6 @@ public class TheBigOne
                 //contendiente menos vida q big 
                 if(contendiente.vida < theBigOne.vida)  
                 {       
-                    System.out.println("No dio con el Pine...");
-                   
                     //big metio max daño?                      
                     if(amountDamageA > theBigOne.maxDamage)
                     {
