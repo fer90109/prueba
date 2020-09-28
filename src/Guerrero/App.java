@@ -4,7 +4,7 @@ public class App
 {
     public static void main(String[] args)
     {  
-        TheBigOne theBigOne = new TheBigOne(); 
+        Torneo torneo = new Torneo(); 
         Warrior[] listaDeGuerreros;
         int cantidadTotalDeGuerreros = 1000;
         listaDeGuerreros = new Warrior[cantidadTotalDeGuerreros];
@@ -22,10 +22,8 @@ public class App
         
         for (int i = 0; i < cantidadTotalDeGuerreros; i++) 
         {
-            theBigOne.combat(listaDeGuerreros[i]);
+           torneo.combat(listaDeGuerreros[i]);
         }        
-        System.out.println("El guerrero Mas poderoso es Nª: " +theBigOne.theBigOne.numerodeWarrior );
-        System.out.println("Arma: - " +theBigOne.theBigOne.arma.nombre +" -   Defenza: - " +theBigOne.theBigOne.escudo.nombre);            
-        System.out.println(" -  con un daño max de: " +theBigOne.theBigOne.maxDamage);
+    torneo.fianlWiner();
     }            
 }
